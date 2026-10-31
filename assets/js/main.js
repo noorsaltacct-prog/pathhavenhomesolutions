@@ -188,7 +188,7 @@ class Flow {
   }
   doneTpl() {
     const d = digits(CONFIG.phone), has = d.length >= 10, t = esc(CONFIG.offerTime);
-    return `<div class="done"><svg viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="30"/><path d="M25 39l9 9 17-19"/></svg><h3 class="flow__q" tabindex="-1">Done. Your offer is on its way.</h3><ol><li>We review your property details.</li><li>We reach out by text or call ${t}.</li><li>You decide. No pressure, no obligation.</li></ol>${has ? `<div class="done__btns"><a class="btn btn--dark" href="tel:+1${d.slice(-10)}">Call us</a><a class="btn btn--dark" href="sms:+1${d.slice(-10)}">Text us</a></div>` : ''}</div>`;
+    return `<div class="done"><svg viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="30"/><path d="M25 39l9 9 17-19"/></svg><h3 class="flow__q" tabindex="-1">Done. Your offer is on its way.</h3><ol><li>Your guide reviews your property details.</li><li>Your personal guide reaches out by text or call ${t}.</li><li>Your guide stays with you from here to closing. You decide, with no pressure.</li></ol>${has ? `<div class="done__btns"><a class="btn btn--dark" href="tel:+1${d.slice(-10)}">Call us</a><a class="btn btn--dark" href="sms:+1${d.slice(-10)}">Text us</a></div>` : ''}</div>`;
   }
   err(msg) { const e = $('.flow__err', this.body); if (e) e.textContent = msg; }
   bind(n) {
