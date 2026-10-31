@@ -3,10 +3,12 @@
 Static site. No build step, no dependencies. Vanilla HTML/CSS/JS.
 
 ## MUST DO BEFORE LAUNCH
-1. **Form endpoint** (otherwise leads go nowhere): open `assets/js/main.js`, set `CONFIG.formEndpoint`.
-   Easiest: create a free form at formspree.io or web3forms.com and paste the URL. Submit a test lead.
-2. **Contact info** in the same CONFIG block: `phone`, `email`, `hours`, `legalEntity`.
-   Leaving phone empty hides every Call/Text button automatically.
+1. **Lead alerts (free)**: form posts to `/api/lead` (`api/lead.js`). In Vercel > Project > Settings > Environment Variables add:
+   - `NTFY_TOPIC` = a long random secret string. Install the free ntfy app, subscribe to that topic, allow notifications -> instant phone alert on every lead.
+   - `RESEND_API_KEY` (free at resend.com, sign up with pathhavenhomesolutions@gmail.com) -> emails that address.
+   - Optional paid SMS: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM`.
+   Redeploy, submit a test lead.
+2. **Contact info** is set in `CONFIG` (`assets/js/main.js`). Still blank: `hours`, `legalEntity`.
 3. **Domain**: find and replace `YOUR-DOMAIN.com` in `index.html`, `robots.txt`, `sitemap.xml`.
 4. **Legal pages**: `privacy.html` and `terms.html` are templates. Replace every `[BRACKETED]` item and have an attorney review them for each state you operate in. Wholesaling rules differ by state. Add anything required in `CONFIG.stateDisclosure`.
 5. **Confirm promises**: "offer within 24 hours" (`CONFIG.offerTime`), "no fees", "no repairs". Only keep what you will actually deliver.

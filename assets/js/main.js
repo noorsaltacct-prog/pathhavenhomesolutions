@@ -4,13 +4,13 @@
 const CONFIG = {
   brand: 'Pathhaven Home Solutions',
   legalEntity: '',            // e.g. 'Pathhaven Home Solutions LLC'. Leave '' to show the brand name
-  phone: '',                  // e.g. '(949) 555-0123'. Leave '' to hide all call/text buttons
-  email: '',                  // e.g. 'offers@yourdomain.com'. Leave '' to hide
+  phone: '(602) 999-2927',    // e.g. '(949) 555-0123'. Leave '' to hide all call/text buttons
+  email: 'pathhavenhomesolutions@gmail.com', // e.g. 'offers@yourdomain.com'. Leave '' to hide
   hours: '',                  // e.g. 'Mon to Sat, 8am to 8pm PT'. Leave '' to hide
   offerTime: 'within 24 hours', // promise shown in the hero and CTA. Only keep what you can deliver
   // REQUIRED BEFORE LAUNCH: your form endpoint (Formspree, Web3Forms, or your own webhook).
   // Example: 'https://formspree.io/f/xxxxxxx'
-  formEndpoint: '',
+  formEndpoint: '/api/lead',
   stateDisclosure: '',        // optional extra state-specific disclosure text for the footer
   areas: [
     { abbr: 'CA', name: 'Southern California', detail: 'Los Angeles, Orange, Riverside, San Bernardino, San Diego and nearby counties', type: 'Houses' },
