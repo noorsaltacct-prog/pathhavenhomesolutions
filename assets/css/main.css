@@ -62,7 +62,7 @@ ul,ol{padding:0;list-style:none}
 .nav__links a:hover{opacity:1;background-size:100% 1px}
 .nav__phone{color:var(--cream);text-decoration:none;font-weight:700;font-size:14.5px;align-items:center;white-space:nowrap}
 .nav .btn{flex:none}
-@media (max-width:860px){.nav__links{display:none}.nav .btn{margin-left:auto}.nav__phone{display:none!important}}
+@media (max-width:860px){.nav__links{display:none}.nav .btn{margin-left:auto}.has-phone .nav__phone{display:none!important}}
 @media (max-width:420px){.nav{padding-left:16px;gap:10px}.nav__logo img{height:24px}.nav .btn--sm{padding:0 14px;font-size:14px}}
 
 /* hero */
